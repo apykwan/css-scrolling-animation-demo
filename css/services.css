@@ -25,6 +25,8 @@
   text-align: center;
   font-size: 3rem;
   margin: 0 0 4rem;
+  animation: both titleAppear;
+  animation-timeline: view();
 }
 .services .cards {
   --card-height: 50vh;
@@ -40,7 +42,33 @@
 
 .services .cards .cards-grid .card {
   height: var(--card-height);
+  position: sticky;
+  top: calc(var(--header-height) + (var(--i) * var(--card-gap)));
 }
+
+.services .cards .cards-grid .card:nth-child(1) {
+  --i: 1;
+  --r: 1deg;
+  --b: var(--pink);
+}
+
+.services .cards .cards-grid .card:nth-child(2) {
+  --i: 2;
+  --r: -1deg;
+  --b: #48fbfb;
+}
+
+.services .cards .cards-grid .card:nth-child(3) {
+  --i: 3;
+  --r: -1deg;
+  --b: #e7e64d;
+}
+
+.services .cards .cards-grid .card:nth-child(4) {
+  --i: 4;
+  --r: 0deg;
+}
+
 .services .cards .cards-grid .card-inner {
   background-color: rgb(11 9 14 / 85%);
   backdrop-filter: blur(6px);
