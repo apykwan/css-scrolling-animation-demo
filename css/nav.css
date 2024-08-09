@@ -4,9 +4,9 @@ header.nav {
   top: 0;
   width: 100%;
   height: 100px;
-  animation: forward nav;
+  animation: forwards nav;
   animation-timeline: --hero-view;
-  animation-range-start: exit-crossing; 
+  animation-range: exit-crossing 50% exit-crossing 70%;
 }
 
 @keyframes nav {
