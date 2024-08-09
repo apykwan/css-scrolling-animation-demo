@@ -1,10 +1,16 @@
 .hero {
-  height: 100vh;
+  height: 150vh;
   view-timeline: --hero-view;
 }
 .hero-inner {
   height: 100vh;
   overflow: hidden;
+}
+
+@media (prefers-reduced-motion) {
+  .hero {
+    height: 100vh;
+  }
 }
 
 .hero .back-video {
@@ -64,6 +70,12 @@
   animation-range: exit-crossing;
 }
 
+@media (prefers-reduced-motion) {
+  .hero .front-video video {
+    animation: none;
+  }
+}
+
 .hero .front-video video {
   width: 100%;
   height: 100%;
@@ -117,6 +129,12 @@
   animation-range: exit-crossing 10% exit-crossing 70%;
 }
 
+@media (prefers-reduced-motion) {
+  .hero .content .content-inner h2.first,
+  .hero .content .content-inner h2.second {
+    animation: none;
+  }
+}
 
 @keyframes frontVideoClipPath {
   20% {
